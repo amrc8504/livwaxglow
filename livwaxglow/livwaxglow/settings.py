@@ -37,7 +37,15 @@ if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "livwaxandglow.com",
+    "www.livwaxandglow.com",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://livwaxandglow.com",
+    "https://www.livwaxandglow.com",
+]
 
 RENDER_EXTERNAL_HOSTNAME = os.getenv("RENDER_EXTERNAL_HOSTNAME")
 if RENDER_EXTERNAL_HOSTNAME:
