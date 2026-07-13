@@ -1,0 +1,739 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Liv Wax & Glow | Sugaring & Body Waxing in Valparaiso</title>
+
+  <meta
+    name="description"
+    content="Liv Wax & Glow provides professional sugaring, body waxing, brow services, and beauty treatments in Valparaiso, Indiana."
+  >
+
+  <link
+    rel="stylesheet"
+    href="{% static 'core/css/style.css' %}"
+  >
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+
+    <a href="{% url 'home' %}" class="brand">
+      <span class="brand-name">Liv Wax & Glow</span>
+      <span class="brand-subtitle">Sugaring · Body Waxing</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#sugaring">Why Sugaring?</a>
+      <a href="#faq">FAQ</a>
+
+      <a
+        href="https://booksy.com/en-us/1664023_liv-wax-glow_hair-removal_19873_valparaiso#ba_s=seo"
+        class="nav-book-button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Book Now
+      </a>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+
+      <div class="hero-copy">
+
+        <p class="eyebrow">
+          Sugaring & Body Waxing in Valparaiso
+        </p>
+
+        <h1>
+          Smooth skin.<br>
+          Confident you.
+        </h1>
+
+        <p class="hero-description">
+          Professional hair-removal services in a welcoming, comfortable
+          environment designed to help you feel confident in your skin.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="https://booksy.com/en-us/1664023_liv-wax-glow_hair-removal_19873_valparaiso#ba_s=seo"
+            class="button button-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book an Appointment
+          </a>
+
+          <a href="#services" class="button button-secondary">
+            Explore Services
+          </a>
+
+        </div>
+
+        <div class="hero-details">
+
+          <div>
+            <strong>Valparaiso, Indiana</strong>
+            <span>Convenient local studio</span>
+          </div>
+
+          <div>
+            <strong>Easy Online Booking</strong>
+            <span>Reserve through Booksy</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-visual">
+
+        <div class="hero-shape"></div>
+
+        <div class="hero-image-card">
+          <img
+            src="{% static 'core/images/hero.jpg' %}"
+            alt="Liv Wax and Glow beauty studio"
+          >
+        </div>
+
+        <div class="floating-card">
+          <span class="floating-icon">✦</span>
+
+          <div>
+            <strong>Feel smooth.</strong>
+            <span>Leave glowing.</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Intro -->
+    <section class="intro-strip">
+
+      <p>
+        Gentle care, professional service, and results that help you feel
+        comfortable and confident.
+      </p>
+
+    </section>
+
+
+    <!-- Featured Services -->
+    <section class="section services-section" id="services">
+
+      <div class="section-heading">
+
+        <p class="section-label">POPULAR SERVICES</p>
+
+        <h2>
+          Treatments made for smooth, glowing skin
+        </h2>
+
+        <p>
+          Explore some of the most frequently booked services at Liv Wax & Glow.
+          Full pricing and availability are available through Booksy.
+        </p>
+
+      </div>
+
+
+      <div class="service-grid">
+
+        <article class="service-card">
+
+          <div class="service-number">01</div>
+
+          <h3>Brazilian Sugaring</h3>
+
+          <p>
+            A gentle hair-removal option using a sugar-based technique for
+            smooth, longer-lasting results.
+          </p>
+
+          <a
+            href="https://booksy.com/en-us/1664023_liv-wax-glow_hair-removal_19873_valparaiso#ba_s=seo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View availability →
+          </a>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-number">02</div>
+
+          <h3>Body Waxing</h3>
+
+          <p>
+            Professional waxing services for legs, arms, underarms, back,
+            stomach, and other areas.
+          </p>
+
+          <a
+            href="https://booksy.com/en-us/1664023_liv-wax-glow_hair-removal_19873_valparaiso#ba_s=seo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View availability →
+          </a>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-number">03</div>
+
+          <h3>Brow Services</h3>
+
+          <p>
+            Brow shaping and maintenance designed to complement your natural
+            features.
+          </p>
+
+          <a
+            href="https://booksy.com/en-us/1664023_liv-wax-glow_hair-removal_19873_valparaiso#ba_s=seo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View availability →
+          </a>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-number">04</div>
+
+          <h3>Facial Waxing</h3>
+
+          <p>
+            Precise waxing for the lip, chin, cheeks, sideburns, and other
+            facial areas.
+          </p>
+
+          <a
+            href="https://booksy.com/en-us/1664023_liv-wax-glow_hair-removal_19873_valparaiso#ba_s=seo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View availability →
+          </a>
+
+        </article>
+
+      </div>
+
+
+      <div class="section-button">
+
+        <a
+          href="https://booksy.com/en-us/1664023_liv-wax-glow_hair-removal_19873_valparaiso#ba_s=seo"
+          class="button button-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View All Services
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="section about-section" id="about">
+
+      <div class="about-images">
+
+        <div class="about-image about-image-large">
+          <img
+            src="{% static 'core/images/sugar.jpg' %}"
+            alt="Olivia, owner of Liv Wax and Glow"
+          >
+        </div>
+
+        <div class="about-image about-image-small">
+          <img
+            src="{% static 'core/images/liv.jpg' %}"
+            alt="Liv Wax and Glow studio details"
+          >
+        </div>
+
+      </div>
+
+
+      <div class="about-copy">
+
+        <p class="section-label">MEET OLIVIA</p>
+
+        <h2>
+          Beauty services with a personal touch
+        </h2>
+
+        <p>
+          Liv Wax & Glow was created to give clients a comfortable, professional
+          place to receive high-quality hair-removal and beauty services.
+        </p>
+
+        <p>
+          Olivia takes the time to make every appointment feel welcoming,
+          personalized, and judgment-free—whether it is your first waxing
+          appointment or part of your regular self-care routine.
+        </p>
+
+        <div class="about-signature">
+          <span>Olivia</span>
+          <small>Owner of Liv Wax & Glow</small>
+        </div>
+
+        <a
+          href="https://booksy.com/en-us/1664023_liv-wax-glow_hair-removal_19873_valparaiso#ba_s=seo"
+          class="text-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book with Olivia →
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- Why Sugaring -->
+    <section class="section sugaring-section" id="sugaring">
+
+      <div class="section-heading light-heading">
+
+        <p class="section-label">THE SWEETER OPTION</p>
+
+        <h2>
+          Why choose sugaring?
+        </h2>
+
+        <p>
+          Sugaring uses a simple sugar-based paste and a specialized removal
+          technique that many clients find gentle and effective.
+        </p>
+
+      </div>
+
+
+      <div class="benefit-grid">
+
+        <article class="benefit-card">
+          <span class="benefit-icon">01</span>
+          <h3>Gentle on Skin</h3>
+          <p>
+            The sugar paste adheres primarily to the hair instead of pulling
+            heavily on live skin.
+          </p>
+        </article>
+
+        <article class="benefit-card">
+          <span class="benefit-icon">02</span>
+          <h3>Smoother Results</h3>
+          <p>
+            Hair is removed from the root, helping skin feel smoother for
+            longer than shaving.
+          </p>
+        </article>
+
+        <article class="benefit-card">
+          <span class="benefit-icon">03</span>
+          <h3>Simple Ingredients</h3>
+          <p>
+            Traditional sugar paste is made with straightforward ingredients
+            such as sugar, water, and lemon.
+          </p>
+        </article>
+
+        <article class="benefit-card">
+          <span class="benefit-icon">04</span>
+          <h3>Less Breakage</h3>
+          <p>
+            The removal technique follows the direction of hair growth,
+            helping reduce breakage.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- Reviews -->
+    <section class="section reviews-section">
+
+      <div class="section-heading">
+
+        <p class="section-label">CLIENT LOVE</p>
+
+        <h2>
+          Kind words from happy clients
+        </h2>
+
+      </div>
+
+
+      <div class="review-grid">
+
+        <article class="review-card">
+
+          <div class="review-stars">★★★★★</div>
+
+          <p>
+            “I was nervous because I had never had my legs waxed and she not only did an excellent job, but she is very friendly and makes you very comfortable the whole time. I will definitely be making this part of my routine!”
+          </p>
+
+          <strong>Laura</strong>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="review-stars">★★★★★</div>
+
+          <p>
+            “Olivia is the best!! She does an awesome job! She is super kind and gentle! So will go at your pace!”
+          </p>
+
+          <strong>Cynthia</strong>
+
+        </article>
+
+
+        <article class="review-card">
+
+          <div class="review-stars">★★★★★</div>
+
+          <p>
+            “Liv is always so sweet and she does excellent high quality work!”
+          </p>
+
+          <strong>Latavia</strong>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq">
+
+      <div class="faq-heading">
+
+        <p class="section-label">BEFORE YOUR APPOINTMENT</p>
+
+        <h2>
+          Frequently asked questions
+        </h2>
+
+        <p>
+          New to waxing or sugaring? Here are a few things to know before your
+          visit.
+        </p>
+
+      </div>
+
+
+      <div class="faq-list">
+
+        <details>
+          <summary>
+            How long should my hair be before my appointment?
+          </summary>
+
+          <p>
+            Hair should generally be around one-quarter inch long, or roughly
+            the length of a grain of rice. Avoid shaving for approximately two
+            weeks beforehand when possible.
+          </p>
+        </details>
+
+
+        <details>
+          <summary>
+            What should I do before my appointment?
+          </summary>
+
+          <p>
+            Arrive with clean, dry skin and avoid applying lotions, oils, or
+            heavy products to the treatment area beforehand.
+          </p>
+        </details>
+
+
+        <details>
+          <summary>
+            Does sugaring hurt?
+          </summary>
+
+          <p>
+            Some discomfort is normal, especially during a first appointment,
+            but many clients find sugaring gentler than traditional waxing.
+          </p>
+        </details>
+
+
+        <details>
+          <summary>
+            How often should I schedule appointments?
+          </summary>
+
+          <p>
+            Most clients return every three to six weeks depending on the
+            service, individual hair growth, and desired results.
+          </p>
+        </details>
+
+
+        <details>
+          <summary>
+            Can I book online?
+          </summary>
+
+          <p>
+            Yes. All available services, pricing, and appointment times can be
+            viewed and reserved through Booksy.
+          </p>
+        </details>
+
+      </div>
+
+    </section>
+
+
+    <!-- Location -->
+    <section class="section location-section">
+
+      <div class="location-card">
+
+        <div class="location-copy">
+
+          <p class="section-label">VISIT THE STUDIO</p>
+
+          <h2>Liv Wax & Glow</h2>
+
+          <p>
+            Professional sugaring and body-waxing services located in
+            Valparaiso, Indiana.
+          </p>
+
+          <div class="location-details">
+
+            <div>
+              <strong>Location</strong>
+              <span>705 Calumet Avenue</span>
+              <span>Valparaiso, Indiana</span>
+              <span>46383</span>
+            </div>
+
+            <div>
+              <strong>Appointments</strong>
+              <span>Available through Booksy</span>
+            </div>
+
+          </div>
+
+          <a
+            href="https://booksy.com/en-us/1664023_liv-wax-glow_hair-removal_19873_valparaiso#ba_s=seo"
+            class="button button-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Location & Book
+          </a>
+
+        </div>
+
+
+        <div class="location-map">
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2989.35996036745!2d-87.05740987826418!3d41.47479525728815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88119a060a57f697%3A0x76b4097a7424efcf!2s705%20Calumet%20Ave%2C%20Valparaiso%2C%20IN%2046383!5e0!3m2!1sen!2sus!4v1783975041877!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Final CTA -->
+    <section class="booking-section">
+
+      <div class="booking-inner">
+
+        <p class="section-label">READY WHEN YOU ARE</p>
+
+        <h2>
+          Make time for smooth, confident skin.
+        </h2>
+
+        <p>
+          Browse available services and reserve your next appointment online.
+        </p>
+
+        <a
+          href="https://booksy.com/en-us/1664023_liv-wax-glow_hair-removal_19873_valparaiso#ba_s=seo"
+          class="button booking-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book Your Appointment
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+
+    <div class="footer-brand">
+
+      <a href="{% url 'home' %}" class="brand footer-logo">
+        <span class="brand-name">Liv Wax & Glow</span>
+        <span class="brand-subtitle">Sugaring · Body Waxing</span>
+      </a>
+
+      <p>
+        Professional beauty and hair-removal services in Valparaiso, Indiana.
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <div>
+        <h3>Explore</h3>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#sugaring">Why Sugaring?</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <div>
+        <h3>Connect</h3>
+
+        <a
+          href="https://booksy.com/en-us/1664023_liv-wax-glow_hair-removal_19873_valparaiso#ba_s=seo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Booksy
+        </a>
+
+        <a
+          href="YOUR_INSTAGRAM_LINK_HERE"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="YOUR_FACEBOOK_LINK_HERE"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <p>© 2026 Liv Wax & Glow. All rights reserved.</p>
+
+      <p>
+        Website by
+        <a
+          href="https://regionwebllc.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Region Web
+        </a>
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", () => {
+        const menuIsOpen = navLinks.classList.toggle("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          menuIsOpen ? "true" : "false"
+        );
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
