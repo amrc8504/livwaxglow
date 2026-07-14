@@ -70,6 +70,13 @@
     <!-- Hero -->
     <section class="hero">
 
+      <div class="hero-background-shapes" aria-hidden="true">
+  <span class="hero-orb hero-orb-one"></span>
+  <span class="hero-orb hero-orb-two"></span>
+  <span class="hero-orb hero-orb-three"></span>
+  <span class="hero-orb hero-orb-four"></span>
+</div>
+
       <div class="hero-copy">
 
         <p class="eyebrow">
@@ -736,6 +743,158 @@
       });
     }
   </script>
+
+  <script>
+  const hero = document.querySelector(".hero");
+  const orbs = [...document.querySelectorAll(".hero-orb")];
+
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (hero && orbs.length && !reducedMotion) {
+    const orbStates = orbs.map((orb, index) => ({
+      element: orb,
+
+      x: 0,
+      y: 0,
+
+      velocityX: 0,
+      velocityY: 0,
+
+      homeX: 0,
+      homeY: 0,
+
+      radius: 90 + index * 18,
+      mass: 1 + index * 0.25,
+    }));
+
+    let pointerX = -9999;
+    let pointerY = -9999;
+    let pointerActive = false;
+
+    function updatePointer(clientX, clientY) {
+      const heroRect = hero.getBoundingClientRect();
+
+      pointerX = clientX - heroRect.left;
+      pointerY = clientY - heroRect.top;
+      pointerActive = true;
+    }
+
+    function animateOrbs() {
+      const heroRect = hero.getBoundingClientRect();
+
+      orbStates.forEach((state) => {
+        const orbRect = state.element.getBoundingClientRect();
+
+        const orbCenterX =
+          orbRect.left - heroRect.left +
+          orbRect.width / 2 +
+          state.x;
+
+        const orbCenterY =
+          orbRect.top - heroRect.top +
+          orbRect.height / 2 +
+          state.y;
+
+        if (pointerActive) {
+          const dx = orbCenterX - pointerX;
+          const dy = orbCenterY - pointerY;
+
+          const distance = Math.hypot(dx, dy);
+          const pushDistance = state.radius + 110;
+
+          if (distance < pushDistance && distance > 0) {
+            const force = (pushDistance - distance) / pushDistance;
+            const directionX = dx / distance;
+            const directionY = dy / distance;
+
+            const pushStrength = 1.2 / state.mass;
+
+            state.velocityX +=
+              directionX * force * pushStrength;
+
+            state.velocityY +=
+              directionY * force * pushStrength;
+          }
+        }
+
+        /* Pull the orb gently back toward its original position */
+        state.velocityX +=
+          (state.homeX - state.x) * 0.0025;
+
+        state.velocityY +=
+          (state.homeY - state.y) * 0.0025;
+
+        /* Friction */
+        state.velocityX *= 0.965;
+        state.velocityY *= 0.965;
+
+        state.x += state.velocityX;
+        state.y += state.velocityY;
+
+        /* Limit how far an orb can be kicked */
+        const maxDistance = 180;
+        const distanceFromHome = Math.hypot(
+          state.x - state.homeX,
+          state.y - state.homeY
+        );
+
+        if (distanceFromHome > maxDistance) {
+          const angle = Math.atan2(
+            state.y - state.homeY,
+            state.x - state.homeX
+          );
+
+          state.x =
+            state.homeX + Math.cos(angle) * maxDistance;
+
+          state.y =
+            state.homeY + Math.sin(angle) * maxDistance;
+
+          state.velocityX *= -0.25;
+          state.velocityY *= -0.25;
+        }
+
+        state.element.style.transform = `
+          translate3d(${state.x}px, ${state.y}px, 0)
+        `;
+      });
+
+      requestAnimationFrame(animateOrbs);
+    }
+
+    hero.addEventListener(
+      "pointermove",
+      (event) => {
+        updatePointer(event.clientX, event.clientY);
+      },
+      { passive: true }
+    );
+
+    hero.addEventListener("pointerleave", () => {
+      pointerActive = false;
+    });
+
+    hero.addEventListener(
+      "touchmove",
+      (event) => {
+        const touch = event.touches[0];
+
+        if (touch) {
+          updatePointer(touch.clientX, touch.clientY);
+        }
+      },
+      { passive: true }
+    );
+
+    hero.addEventListener("touchend", () => {
+      pointerActive = false;
+    });
+
+    animateOrbs();
+  }
+</script>
 
 </body>
 </html>

@@ -40,7 +40,8 @@ if not DEBUG:
 ALLOWED_HOSTS = [
     "livwaxandglow.com",
     "www.livwaxandglow.com",
-    "127.0.0.1"
+    "127.0.0.1",
+    "10.0.0.130",
 ]
 
 RENDER_EXTERNAL_HOSTNAME = os.getenv("RENDER_EXTERNAL_HOSTNAME")
